@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <script src="lost.js"></script>
+<style>
+    body {background-color: aliceblue;}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color:black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:gray;
+}
+
+input[type=file] {
+  width: 50%;
+  background-color:white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<center>
+  <form method="post" action="lost.php" enctype="multipart/form-data">
+        <label>In_id</label>
+        <input type="text" id="inid" name="in_id" placeholder="Your college id."><br><br>
+        <label>Item Name</label>
+        <input type="text" id="thing" name="user_thing" placeholder="Enter the item lost."><br><br>
+        <label >Lost place</label>
+        <input type="text" id="place" name="user_message" placeholder="where you got this."><br><br>
+        <input type="file" name="image" />
+        <input type="submit" id="btn" value="Submit" >       
+      </form>
+</center>
+
+
+
+</body>
+</html>

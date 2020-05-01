@@ -1,0 +1,22 @@
+var mainApp = angular.module("mainApp", []);
+         
+mainApp.controller('studentController', function($scope) {
+   $scope.student = {
+      firstName: "",
+      lastName: "",
+      
+      fullName: function() {
+         var studentObject;
+         studentObject = $scope.student;
+         return studentObject.firstName + "  " + studentObject.lastName;
+      }
+   };
+});
+
+function sent()
+{
+    alert("Your feedback has been sent !!!");
+    document.getElementById('form1').reset();
+   
+  
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+   <script src="contact.js"></script>
+   <script type="text/javascript" src="date_time.js"></script>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+ body {background-color: aliceblue;}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 50%;
+  background-color:rgb(76, 143, 185);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:gray;
+}
+
+input[type=file] {
+  width: 50%;
+  background-color:white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* div {
+  border-radius: 5px;
+  background-color: #bbf0f1;
+  padding: 20px;
+} */
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+.button 
+{
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 20px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 18%;
+}
+
+.button:hover {
+  background-color:lightskyblue;
+  color: white;
+}
+</style>
+
+
+</head>
+<body>
+  <div class="header">
+    <img src="PICT-Logo.jpg" alt="Logo" style="width:60px;">
+    <div class="header-right">
+        <a  href="index.html">Home</a>
+        <a  href="profile.php">Profile</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a href="login.php">Sign-out</a>
+      </div>
+      <span id="date_time"></span>
+      <script type="text/javascript">window.onload = date_time('date_time');</script>
+    </div>
+      <br>
+      
+      <div class="row">
+        <div class="col-sm-12">
+           <center>
+               <h2>
+                   YOUR FEEDBACK MATTERS !!!<br>
+            
+               </h2>
+           </center>
+        </div> 
+      </div>
+      <div class="row" >
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-4">
+            <form method="post" action="contact.php">
+                <label>Enter Fname</label>
+                <input type="text" id="fname" name="fname" placeholder="Your fname.."><br><br>
+                <label>Enter Lname</label>
+                <input type="text" id="lname" name="lname" placeholder="Your lname..."><br><br>
+                <label>Enter your feedback</label>
+                <input type="text" id="feedback" name="feedback" placeholder="Your feedback..."><br><br>
+                <input type="submit" id="btn" value="Submit" style="width: auto;" >
+                
+              </form>
+            </div>
+        <div class="col-sm-4">
+         
+          
+         
+        <br>
+        <br>
+        
+        </div>
+        <div class="col-sm-2">
+        </div>
+</body>
+</html> 

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="date_time.js"></script>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  height: 10%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+.button 
+{
+  background-color: #1c87c9;
+  border: none;
+  color: white;
+  padding: 20px 34px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 18%;
+}
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 45%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.6;
+  width: 45%;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+.button:hover {
+  background-color:lightskyblue;
+  color: white;
+}
+#LnF {background-color: cornsilk;}
+#Keys {background-color: Azure;}
+#Courier {background-color: lavenderblush;}
+#Lift {background-color: rgb(192, 236, 222);}
+</style>
+</head>
+<body>
+    <div class="header">
+        <img src="PICT-Logo.jpg" alt="Logo" style="width:60px;">
+        <div class="header-right">
+            <a  class="active"  href="index.html">Home</a>
+            <a  href="profile.php">Profile</a>
+            <a  href="contact.html"> Contact</a>
+            <a href="login.php">Sign-out</a>
+          </div>
+          <span id="date_time"></span>
+          <script type="text/javascript">window.onload = date_time('date_time');</script>
+      </div>
+
+      <!-- tabs at the top -->
+<button class="tablink" onclick="openPage('LnF', this, 'Grey')" > Lost And Found</button>           
+<button class="tablink" onclick="openPage('Keys', this, 'Grey')" id="defaultOpen" >Keys</button>
+<button class="tablink" onclick="openPage('Courier', this, 'Grey')">Courier</button>
+<button class="tablink" onclick="openPage('Lift', this, 'Grey')">Lift</button>
+
+<!-- lost and found -->
+<div id="LnF" class="tabcontent">
+  
+  <iframe src="lost.html" width=80% height=100% align="right" name="iframe_a"></iframe>
+  <a href="lost.html" class="button" target="iframe_a">Lost</a>
+  <a href="found.html" class="button" target="iframe_a">Found</a>
+  <a href="tablelf.php" class="button" target="iframe_a">Records</a>
+</div>
+<!-- keys -->
+<div id="Keys" class="tabcontent">
+
+  <iframe src="keytake.html" width=80% height=100% align="right" name="iframe_b"></iframe>
+  <a href="keytake.html" class="button" target="iframe_b">User Take</a>
+  <a href="keygive.html" class="button" target="iframe_b">User Return</a>
+  <a href="tablek.php" class="button" target="iframe_b">Records</a>
+  <a href="keynoti.php" class="button" target="iframe_b">Notifications</a>
+
+</div>
+
+<!-- courier -->
+<div id="Courier" class="tabcontent">
+  <iframe src="tablec.php" width=80% height=100% align="right" name="iframe_c"></iframe>
+  <a href="ct.html" class="button" target="iframe_c">Recieve</a>
+  <a href="cg.html" class="button" target="iframe_c">Give</a>
+  <a href="tablec.php" class="button" target="iframe_c">Records</a>
+
+</div>
+
+<!-- lift -->
+<div id="Lift" class="tabcontent">
+  <iframe src="liftissue.html" width=80% height=100% align="right" name="iframe_d"></iframe>
+  <a href="liftissue.html" class="button" target="iframe_d">Issue</a>
+  <a href="liftreturn.html" class="button" target="iframe_d">Return</a>
+  <a href="tablelift.php" class="button" target="iframe_d">Records</a>
+  <a href="liftnoti.php" class="button" target="iframe_d">Notifications</a>
+
+</div>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+       
+
+</body>
+</html> 

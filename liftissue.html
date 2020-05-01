@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <script src="lost.js"></script> -->
+<style>
+    body {background-color: aliceblue;}
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color:black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color:gray;
+}
+
+input[type=file] {
+  width: 50%;
+  background-color:white;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<center>
+  <form method="post" action="liftissue.php">
+        <label>Student-id</label>
+        <input type="text" id="sid" name="s_id" placeholder="Your college id..."><br><br>
+        <label>Card-id</label>
+        <input type="text" id="card_id" name="card_id" placeholder="The card id..."><br><br>
+        <label>Card-Type</label>
+        <input list="ctype" name="ctype">
+           <datalist id="ctype">
+              <option value="Master Card">
+              <option value="A1 building">
+              <option value="A2 building">
+              <option value="A3 building">
+              <option value="F building">
+           </datalist>   <br><br>    
+        <input type="submit" id="btn" value="Submit" >
+        
+      </form>
+</center>
+
+
+
+</body>
+</html>
